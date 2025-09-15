@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.banner {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.banner nav {
+    margin-top: 10px;
+}
+
+.banner button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: #003e80;
+}
+
+.banner button.active {
+    background-color: #003e80;
+    font-weight: bold;
+}
+
+.converter-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.main-dial-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.other-dials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.dial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bold;
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease-out;
+    position: relative;
+}
+        
+.dial-number {
+    cursor: pointer;
+}
+
+.dial-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    border: none;
+    background: none;
+    outline: none;
+    color: #333;
+    display: none;
+}
+
+.small-dial {
+    width: 150px;
+    height: 70px;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tutorial-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-article {
+    margin-bottom: 30px;
+}
+
+.example {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    margin-top: 15px;
+    text-align: left;
+    line-height: 1.6;
+}
