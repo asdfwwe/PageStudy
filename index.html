@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진수 변환기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="banner">
+        <h1>진수 변환기</h1>
+        <nav>
+            <button id="decimal-btn" class="active">10진수</button>
+            <button id="binary-btn">2진수</button>
+            <button id="octal-btn">8진수</button>
+            <button id="hex-btn">16진수</button>
+        </nav>
+    </header>
+
+    <main class="converter-area">
+        <div id="main-dial-container" class="main-dial-container">
+            <h2 id="main-base-label">10진수</h2>
+            <div id="main-dial" class="dial">
+                <span id="dial-number" class="dial-number">0</span>
+                <input type="text" id="dial-input" class="dial-input">
+            </div>
+        </div>
+        <div class="other-dials-container">
+            <div class="dial-group">
+                <h3 id="other-base-label-1">2진수</h3>
+                <div id="other-dial-1" class="small-dial">0</div>
+            </div>
+            <div class="dial-group">
+                <h3 id="other-base-label-2">8진수</h3>
+                <div id="other-dial-2" class="small-dial">0</div>
+            </div>
+            <div class="dial-group">
+                <h3 id="other-base-label-3">16진수</h3>
+                <div id="other-dial-3" class="small-dial">0</div>
+            </div>
+        </div>
+    </main>
+
+    <section class="tutorial-section">
+        <h2>진수 변환 공식</h2>
+        <article id="decimal-to-other" class="tutorial-article">
+            <h3>10진수 ➡️ 다른 진수</h3>
+            <p>10진수를 2진수, 8진수, 16진수로 변환하려면 <strong>해당 진수의 수로 나누고 나머지를 역순</strong>으로 적습니다.</p>
+            <h4>예제: 10진수 13을 2진수로</h4>
+            <div class="example">
+                <p>13 ÷ 2 = 6 ... 1</p>
+                <p>6 ÷ 2 = 3 ... 0</p>
+                <p>3 ÷ 2 = 1 ... 1</p>
+                <p>1 ÷ 2 = 0 ... 1</p>
+                <p>따라서, 13<sub>10</sub> = 1101<sub>2</sub></p>
+            </div>
+        </article>
+        <article id="other-to-decimal" class="tutorial-article">
+            <h3>다른 진수 ➡️ 10진수</h3>
+            <p>다른 진수를 10진수로 변환하려면 <strong>각 자리수에 해당 진수의 거듭제곱을 곱해 모두 더합니다.</strong></p>
+            <h4>예제: 2진수 1101을 10진수로</h4>
+            <div class="example">
+                <p>(1 × 2³) + (1 × 2²) + (0 × 2¹) + (1 × 2⁰)</p>
+                <p>= (1 × 8) + (1 × 4) + (0 × 2) + (1 × 1)</p>
+                <p>= 8 + 4 + 0 + 1 = 13</p>
+                <p>따라서, 1101<sub>2</sub> = 13<sub>10</sub></p>
+            </div>
+        </article>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
